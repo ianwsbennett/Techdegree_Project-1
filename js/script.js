@@ -38,12 +38,9 @@ let randomQuote = [
 ***/
 
 
-// Global Variable for getting random number 
-let randomNumber = Math.floor(Math.random() * randomQuote.length);
-
-
 // Function to get random quote from array  
 function getRandomQuote() {
+  let randomNumber = Math.floor(Math.random() * randomQuote.length);
   let finalQuote = randomQuote[randomNumber];
   return finalQuote;
 }
@@ -61,9 +58,10 @@ function printQuote() {
   if (finalQuote.year){
     text += `<span class="year"> ${finalQuote.year}</span>`;
   }
-  
+
   text += `</p>`;
   document.getElementById('quote-box').innerHTML = text; 
+  console.log(finalQuote);
 }
 
 
